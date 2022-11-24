@@ -1,32 +1,62 @@
-# UltraGCN
-
-This is Pytorch implementation for our CIKM 2021 paper:
-
-> Kelong Mao, Jieming Zhu, Xi Xiao, Biao Lu, Zhaowei Wang, Xiuqiang He. UltraGCN: Ultra Simplification of Graph Convolutional Networks for Recommendation. [Paper in arXiv](https://arxiv.org/pdf/2110.15114.pdf).
 
 
 
-## Introduction
-In this work, we propose an ultra-simplified formulation of GCN, dubbed UltraGCN. UltraGCN skips explicit message passing and directly approximate the limit of infinite message passing layers.
+## run
+
+```
+conda create --name=UltraGCN python=3.7.9
+conda activate UltraGCN
+pip install -r requirements.txt
+```
+
+The dataset should consist of train/test.txt, in which each row represents a user.
 
 
 
-## Environment Requirement
-The required packages are as follows:
-* python: 3.7.9
-* pytorch 1.4.0
-* numpy: 1.19.2
-* scipy: 1.1.0
-* tensorboard: 2.4.0
-
-
-## Code
-* main.py: All python code to reproduce UltraGCN
-* dataset_name_config.ini: The configuration file which includes parameter settings for reproduction on the specific dataset.
+### Gowalla
 
 ```bash
-python main.py --config_file dataset_config.ini
+CUDA_VISIBLE_DEVICES=3 python main.py --config_file gowalla_config.ini
 ```
+
+### Yelp2018
+
+
+```bash
+CUDA_VISIBLE_DEVICES=3 python main.py --config_file yelp2018_config.ini
+```
+
+### Books
+
+```bash
+CUDA_VISIBLE_DEVICES=3 python main.py --config_file amazon_config.ini
+```
+
+### ML-1M
+
+```bash
+CUDA_VISIBLE_DEVICES=3 python main.py --config_file ml-1m_config.ini
+```
+
+### CDs
+
+```bash
+CUDA_VISIBLE_DEVICES=3 python main.py --config_file amazoncds_config.ini
+```
+
+### Electronics
+
+```bash
+CUDA_VISIBLE_DEVICES=3 python main.py --config_file electronics_config.ini
+```
+
+## remove
+
+```
+conda activate base
+conda remove -n UltraGCN --all
+```
+
 
 
 ## Reproduction
