@@ -16,38 +16,45 @@ The dataset should consist of train/test.txt, in which each row represents a use
 ### Gowalla
 
 ```bash
-CUDA_VISIBLE_DEVICES=3 python main.py --config_file gowalla_config.ini
+python main.py --config_file gowalla_config.ini
 ```
 
 ### Yelp2018
 
 
 ```bash
-CUDA_VISIBLE_DEVICES=3 python main.py --config_file yelp2018_config.ini
+python main.py --config_file yelp2018_config.ini
 ```
 
 ### Books
 
 ```bash
-CUDA_VISIBLE_DEVICES=3 python main.py --config_file amazon_config.ini
+python main.py --config_file amazon_config.ini
 ```
 
 ### ML-1M
 
 ```bash
-CUDA_VISIBLE_DEVICES=3 python main.py --config_file ml-1m_config.ini
+python main.py --config_file ml-1m_config.ini
 ```
 
 ### CDs
 
 ```bash
-CUDA_VISIBLE_DEVICES=3 python main.py --config_file amazoncds_config.ini
+python main.py --config_file amazoncds_config.ini
 ```
 
 ### Electronics
 
 ```bash
-CUDA_VISIBLE_DEVICES=3 python main.py --config_file electronics_config.ini
+python main.py --config_file electronics_config.ini
+```
+
+### Beauty
+
+
+```bash
+python main.py --config_file amazonbeauty_config.ini
 ```
 
 ## remove
